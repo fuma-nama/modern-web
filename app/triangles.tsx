@@ -1,13 +1,16 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import clsx from "clsx";
 
 export function Triangles() {
   const ref = useRef<HTMLCanvasElement>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const canvas = ref.current!;
     if (!canvas) return;
 
+    setMounted(true);
     const context = canvas.getContext("2d")!;
 
     canvas.width = window.innerWidth;
@@ -46,7 +49,10 @@ export function Triangles() {
       ref={ref}
       width={500}
       height={500}
-      className="absolute inset-0 z-[-2] animate-in fade-in"
+      className={clsx(
+        "absolute inset-0 z-[-2]",
+        mounted && "animate-in fade-in delay-200 duration-1000"
+      )}
     />
   );
 }

@@ -2,6 +2,8 @@ import Foreground from "@/public/foreground.png";
 import Image from "next/image";
 import { BocchiChan } from "./bocchi-chan";
 import { Triangles } from "./triangles";
+import { Globe } from "./globe";
+import { Stars } from "./stars";
 
 export default function Home() {
   return (
@@ -33,8 +35,30 @@ export default function Home() {
           <BocchiChan />
         </div>
       </div>
-      <div className="container py-20">
-        <h1 className="font-bold text-4xl">Next-gen Stack</h1>
+      <div
+        id="stars-container"
+        className="relative z-[2] w-full mx-auto flex flex-col items-center py-40 text-center"
+      >
+        <Stars />
+        <h1 className="font-bold text-3xl mb-4 px-8 lg:text-5xl">
+          Next Generation Stack
+        </h1>
+        <p className="text-muted-foreground px-8">
+          Nothing is more interesting than a new framework, and replacing your
+          old stack with something new.
+        </p>
+        <div className="w-full flex flex-col items-center h-[250px] overflow-hidden lg:h-[500px]">
+          <Globe />
+        </div>
+        <div className="mt-[-100px] p-8 bg-gradient-to-b from-white to-gray-500 border rounded-xl shadow-xl shadow-black/30 flex flex-col gap-4 h-[140px] items-center">
+          <div className="w-fit h-fit p-1 bg-gradient-to-b from-brand to-white rounded-md">
+            <div className="inline-flex items-center justify-center font-medium bg-gradient-to-br from-black via-gray-700 to-black w-9 h-9 rounded-md">
+              ?
+            </div>
+          </div>
+
+          <p className="text-sm">The Best Tool for Web Developers</p>
+        </div>
       </div>
     </main>
   );
