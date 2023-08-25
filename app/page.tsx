@@ -4,10 +4,11 @@ import { BocchiChan } from "./bocchi-chan";
 import { Triangles } from "./triangles";
 import { Globe } from "./globe";
 import { Stars } from "./stars";
+import { Connector } from "./connector";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-brand">
+    <main className="flex min-h-screen flex-col bg-black">
       <div className="relative z-[2] h-screen overflow-hidden bg-[url('/background.png')] bg-cover">
         <Triangles />
         <div className="px-8 py-[32vh] xl:px-[20vw]">
@@ -58,6 +59,23 @@ export default function Home() {
           </div>
 
           <p className="text-sm">The Best Tool for Web Developers</p>
+        </div>
+        <div className="relative overflow-hidden">
+          <Connector className="absolute top-0 -left-10 w-full h-full" />
+          <Connector className="w-[500px] max-w-full h-auto" />
+          <Connector className="absolute top-0 left-10 w-full h-full" />
+        </div>
+
+        <div className="relative bg-gradient-to-br from-black via-gray-400 to-black p-0.5 w-full max-w-[500px] rounded-xl mt-[-100px]">
+          <div className="absolute inset-0 blur-xl bg-gradient-to-br from-cyan-400 to-pink-500 z-[-1]" />
+
+          <div className="w-full bg-gradient-to-b from-black to-gray-800 p-8 rounded-[inherit]">
+            <h3 className="font-medium text-lg mb-2">We live on the Edge</h3>
+            <p className="text-muted-foreground/50 text-sm">
+              Use bleeding edge technologies in Production and trust beta
+              features
+            </p>
+          </div>
         </div>
       </div>
     </main>

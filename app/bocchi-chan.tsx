@@ -30,7 +30,7 @@ export function BocchiChan() {
           width={350}
           height={858}
           sizes="600px"
-          className="min-w-[600px] absolute transition-transform duration-100 animate-in slide-in-from-top-40"
+          className="min-w-[600px] absolute transition-transform duration-100 animate-in slide-in-from-top-60"
           style={{
             transform: `translateX(-${i * 50}px)`,
             zIndex: count - i,

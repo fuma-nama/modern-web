@@ -14,12 +14,16 @@ export function Stars() {
     const context = canvas.getContext("2d")!;
 
     const container = document.getElementById("stars-container")!;
-    canvas.width = container.clientWidth;
-    canvas.height = container.clientHeight;
 
-    context.fillStyle = "#ffffff0d";
     const W = 5;
     const P = 0;
+
+    function init() {
+      canvas.width = container.clientWidth;
+      canvas.height = container.clientHeight;
+
+      context.fillStyle = "#ffffff0d";
+    }
 
     function draw() {
       const center = canvas.width / 2;
@@ -44,12 +48,17 @@ export function Stars() {
       context.restore();
     }
 
+    const onResize = () => {
+      init();
+    };
+
+    init();
+    window.addEventListener("resize", onResize);
     const id = setInterval(() => draw(), 100);
-    const id2 = setInterval(() => {}, 1000);
 
     return () => {
+      window.removeEventListener("resize", onResize);
       clearInterval(id);
-      clearInterval(id2);
     };
   }, []);
 
@@ -59,7 +68,7 @@ export function Stars() {
       width={500}
       height={500}
       className={clsx(
-        "absolute inset-0 z-[-2]",
+        "absolute inset-0 z-[-2] w-full h-full",
         mounted && "animate-in fade-in duration-1000"
       )}
     />
