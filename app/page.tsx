@@ -88,6 +88,32 @@ export default function Home() {
           <Cards />
         </div>
       </div>
+      <div className="bg-black py-20">
+        <div className="grid grid-cols-3 container">
+          <Image
+            alt=""
+            src="/bad-apple.png"
+            width={500}
+            height={500 / 1.4275}
+            className="bg-gradient-to-b from-white to-black"
+          />
+
+          <Image
+            alt=""
+            src="/bad-apple.png"
+            width={500}
+            height={500 / 1.4275}
+            className="bg-gradient-to-br from-black to-white col-span-2 row-span-2 w-full"
+          />
+          <Image
+            alt=""
+            src="/bad-apple.png"
+            width={500}
+            height={500 / 1.4275}
+            className="bg-white invert"
+          />
+        </div>
+      </div>
     </main>
   );
 }
