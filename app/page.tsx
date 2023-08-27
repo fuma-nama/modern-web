@@ -5,6 +5,7 @@ import { Triangles } from "./triangles";
 import { Globe } from "./globe";
 import { Stars } from "./stars";
 import { Connector } from "./connector";
+import { Cards } from "./cards";
 
 export default function Home() {
   return (
@@ -76,6 +77,15 @@ export default function Home() {
               features
             </p>
           </div>
+        </div>
+      </div>
+      <div className="bg-brand py-20">
+        <div className="container px-8">
+          <h1 className="text-4xl font-bold lg:text-6xl mb-4">Learn More.</h1>
+          <p className="text-muted-foreground mb-8">
+            Become a web developer and get into our industry for free.
+          </p>
+          <Cards />
         </div>
       </div>
     </main>
