@@ -21,9 +21,16 @@ export default function Home() {
             technologies to achieve high-quality results that is inspiring and
             breathtaking.
           </p>
-          <button className="text-brand bg-foreground rounded-md px-4 py-2 font-medium text-sm mt-8 transition-colors hover:bg-foreground/80 focus-visible:outline-none">
-            Learn More
-          </button>
+          <div className="flex flex-row mt-8">
+            <a
+              href="https://youtu.be/dQw4w9WgXcQ"
+              rel="noreferrer noopener"
+              className="text-brand bg-foreground rounded-md px-4 py-2 font-medium text-sm transition-colors hover:bg-foreground/80 focus-visible:outline-none"
+            >
+              Learn More
+            </a>
+          </div>
+
           <Image
             alt=""
             width={400}
@@ -89,29 +96,49 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-black py-20">
-        <div className="grid grid-cols-3 container">
-          <Image
-            alt=""
-            src="/bad-apple.png"
-            width={500}
-            height={500 / 1.4275}
-            className="bg-gradient-to-b from-white to-black"
-          />
+        <div className="container">
+          <div className="grid grid-cols-3">
+            <Image
+              alt=""
+              src="/bad-apple.png"
+              width={500}
+              height={500 / 1.4275}
+              className="bg-gradient-to-b from-white to-black"
+            />
 
-          <Image
-            alt=""
-            src="/bad-apple.png"
-            width={500}
-            height={500 / 1.4275}
-            className="bg-gradient-to-br from-black to-white col-span-2 row-span-2 w-full"
-          />
-          <Image
-            alt=""
-            src="/bad-apple.png"
-            width={500}
-            height={500 / 1.4275}
-            className="bg-white invert"
-          />
+            <Image
+              alt=""
+              src="/bad-apple.png"
+              width={500}
+              height={500 / 1.4275}
+              className="bg-gradient-to-br from-black to-white col-span-2 row-span-2 w-full"
+            />
+            <Image
+              alt=""
+              src="/bad-apple.png"
+              width={500}
+              height={500 / 1.4275}
+              className="bg-white invert"
+            />
+          </div>
+          <p className="mt-8 text-sm">
+            Web development is the process of creating and maintaining websites.
+            It involves a range of tasks, including web design, coding,{" "}
+            <b>listening to your annoying manager</b>, and content creation. The
+            goal of web development is to create a website that is functional,
+            user-friendly, and visually appealing to{" "}
+            <b>scare your users with ads</b>. Web developers use a variety of
+            programming languages and tools to build websites, including
+            TypeScript, TypeScript, TypeScript, and TypeScript. They also work
+            closely with clients to understand their needs and create a website
+            that meets their requirements. <br />
+            <br />
+            Most of them have to spend 50% time of their life to{" "}
+            <b>touch new frameworks</b> instead of grasses. Web development is a
+            complex and constantly evolving field, and skilled developers are in
+            high demand in today's digital economy, even though people want to
+            become Software Engineer rather than Web Developer.
+          </p>
         </div>
       </div>
     </main>
