@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-black py-20">
-        <div className="container">
+        <div className="container px-8">
           <div className="grid grid-cols-3">
             <Image
               alt=""
